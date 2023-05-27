@@ -1,8 +1,8 @@
 /*  Name: Marcos Ondruska
     PantherId: 2685885
     Program description: This program takes a user input integer from the command line and applies
-    the Collatz conjecture to it. A child process is spawned for this. A second child adds 4 to the userInput
-    and also applies thhe Collatz conjecture
+    the Collatz conjecture to it. A first child process is forked for this. A second child adds 4 to the userInput
+    and also applies the Collatz conjecture
 
     Task 2: What I've been taught is that these proccesses are non deterministic, and there is no way you can
     predict in which order the processes will finish/complete. The scheduler controls this function.
