@@ -20,6 +20,24 @@
 #include <string.h>
 #include <stdlib.h>
 
+int collatz(int processNumber, int n)
+{
+    while (n > 1)
+    {
+        if (n % 2 == 0)
+        {
+            n = n / 2;
+            printf("From child%d: number = %d\n", processNumber, n);
+        }
+        else
+        {
+            n = 3 * n + 1;
+            printf("From child%d: number = %d\n", processNumber, n);
+        }
+    }
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
     pid_t pid1, pid2;
@@ -58,19 +76,7 @@ int main(int argc, char *argv[])
         n = userInput;
 
         // apply Collatz conjecture
-        while (n > 1)
-        {
-            if (n % 2 == 0)
-            {
-                n = n / 2;
-                printf("From child1: number = %d\n", n);
-            }
-            else
-            {
-                n = 3 * n + 1;
-                printf("From child1: number = %d\n", n);
-            }
-        }
+        collatz(1, userInput);
         printf("From child1, pid=%d I'm done!\n", getpid());
     }
     // child process 2
@@ -88,19 +94,7 @@ int main(int argc, char *argv[])
             printf("From child2, pid=%d, init: number=%d\n", getpid(), n2);
 
             // apply Collatz conjecture
-            while (n2 > 1)
-            {
-                if (n2 % 2 == 0)
-                {
-                    n2 = n2 / 2;
-                    printf("From child2: number = %d\n", n2);
-                }
-                else
-                {
-                    n2 = 3 * n2 + 1;
-                    printf("From child2: number = %d\n", n2);
-                }
-            }
+            collatz(2, n2);
             printf("From child2, pid=%d I'm done!\n", getpid());
         }
         // parent process
