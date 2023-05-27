@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     int n = 0;  // child 1 variable
     int n2 = 0; // child 2 variable
 
-    if (optind < argc)                      /* these are the arguments after the command-line options */
+    if (optind < argc)                      // these are the arguments after the command-line options
         for (; optind < argc; optind++)     // work through the command line options
             userInput = atoi(argv[optind]); // print command line option
 
