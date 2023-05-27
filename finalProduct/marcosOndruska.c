@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
 
     // fork a child process
     pid1 = fork();
-    pid2 = fork();
 
     // error occured
     if (pid1 < 0)
@@ -83,6 +82,8 @@ int main(int argc, char *argv[])
     // child process 2
     else
     {
+        pid2 = fork();
+
         if (pid2 < 0)
         {
             fprintf(stderr, "Fork failed");
