@@ -6,6 +6,10 @@
 
     Task 2: What I've been taught is that these proccesses are non deterministic, and there is no way you can
     predict in which order the processes will finish/complete. The scheduler controls this function.
+    Curiously when I run this application on a Mac child one always completely executes before child 2
+    starts. On Ocelot I ran the application 10 times and there is definitely randomness in the outcomes in
+    how the processes concurrently run, but child 2 always finished second/last. My guess is that the way that
+    I have structured my if.. else with child 1 running before child 2 makes this happen.
 
 
 */
