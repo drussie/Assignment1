@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
     if (optind < argc)                      // these are the arguments after the command-line options
         for (; optind < argc; optind++)     // work through the command line options
-            userInput = atoi(argv[optind]); // print command line option
+            userInput = atoi(argv[optind]); // save comand line option to userInput
 
     // Project parameters call for a user entered integer between 1 and 39
     if (userInput <= 0 || userInput >= 40)
