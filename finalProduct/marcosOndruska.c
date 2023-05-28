@@ -1,15 +1,19 @@
 /*  Name: Marcos Ondruska
     PantherId: 2685885
-    Program description: This program takes a user input integer from the command line and applies
-    the Collatz conjecture to it. A first child process is forked for this. A second child adds 4 to the userInput
-    and also applies the Collatz conjecture
+    Program description: This program takes a user input integer from the command
+    line and applies the Collatz conjecture to it. A first child process is forked
+     for this. A second child adds 4 to the userInput and also applies the
+     Collatz conjecture
 
-    Task 2: What I've been taught is that these proccesses are non deterministic, and there is no way you can
-    predict in which order the processes will finish/complete. The scheduler controls this function.
-    Curiously when I run this application on a Mac child 1 always completely executes before child 2
-    starts. On Ocelot I ran the application approximately 50 times and there is definitely randomness in the outcomes in
-    how the processes concurrently run. Child 2 mostly completes after child 1. However child 2 does complete before child 1 at times.
-    My guess is that the way that I have structured my if.. else with child 1 coded before child 2 biases it this way.
+    Task 2: What I've been taught is that these proccesses are non deterministic,
+    and there is no way you can predict in which order the processes will
+    finish/complete. The scheduler controls this function. Curiously when I run
+    this application on a Mac child 1 always completely executes before child 2
+    starts. On Ocelot I ran the application approximately 50 times and there is
+    definitely randomness in the outcomes in how the processes concurrently
+    run. Child 2 mostly completes after child 1. However child 2 does complete
+    before child 1 at times. My guess is that the way that I have structured
+    my if.. else with child 1 coded before child 2 biases it this way.
 
 
 */
