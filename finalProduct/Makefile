@@ -1,10 +1,7 @@
-all: marcosOndruska moV2
+all: marcosOndruska
 
 marcosOndruska: marcosOndruska.o 
-	cc -o marcosOndruska marcosOndruska.c 
-
-moV2: moV2.o 
-	cc -o moV2 moV2.c 	
+	cc -o marcosOndruska marcosOndruska.c 	
 
 clean:
 	rm *.marcosOndruska
