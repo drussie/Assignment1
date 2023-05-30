@@ -24,15 +24,22 @@
 #include <string.h>
 #include <stdlib.h>
 
+int q = 0; // Global variable to omit first userMessage as per project example output
+
+int userMessage(int child, int number)
+{
+    printf("From child%d: number = %d\n", child, number);
+    return 0;
+}
+
+// collatz conjecture recursive method
 int collatz(int processNumber, int n)
 {
-    const int q = n;
-    printf("Const q = %d\n", q);
-    // printf("From child%d: number = %d\n", processNumber, n);
-    if (!(q == n))
+    if (q > 0)
     {
         userMessage(processNumber, n);
     }
+
     if (n == 1)
     {
         return 0;
@@ -41,19 +48,15 @@ int collatz(int processNumber, int n)
     {
         if (n % 2 == 0)
         {
+            q++;
             return collatz(processNumber, n / 2);
         }
         else
         {
+            q++;
             return collatz(processNumber, 3 * n + 1);
         }
     }
-}
-
-int userMessage(int child, int number)
-{
-    printf("From child%d: number = %d\n", child, number);
-    return 0;
 }
 
 int main(int argc, char *argv[])
