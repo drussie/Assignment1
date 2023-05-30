@@ -26,8 +26,13 @@
 
 int collatz(int processNumber, int n)
 {
+    const int q = n;
+    printf("Const q = %d", q);
     // printf("From child%d: number = %d\n", processNumber, n);
-    userMessage(processNumber, n);
+    if (!(q == n))
+    {
+        userMessage(processNumber, n);
+    }
     if (n == 1)
     {
         return 0;
@@ -36,14 +41,10 @@ int collatz(int processNumber, int n)
     {
         if (n % 2 == 0)
         {
-            // userMessage(processNumber, n);
-            //  printf("From child%d: number = %d\n", processNumber, n);
             return collatz(processNumber, n / 2);
         }
         else
         {
-            // userMessage(processNumber, n);
-            //  printf("From child%d: number = %d\n", processNumber, n);
             return collatz(processNumber, 3 * n + 1);
         }
     }
