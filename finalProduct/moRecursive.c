@@ -46,14 +46,16 @@ int collatz(int processNumber, int n)
     }
     else
     {
+        q++;
+
         if (n % 2 == 0)
         {
-            q++;
+
             return collatz(processNumber, n / 2);
         }
         else
         {
-            q++;
+
             return collatz(processNumber, 3 * n + 1);
         }
     }
