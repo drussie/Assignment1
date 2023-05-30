@@ -9,11 +9,11 @@
     and there is no way you can predict in which order the processes will
     finish/complete. The scheduler controls this function. Curiously when I run
     this application on a Mac child 1 always completely executes before child 2
-    starts. On Ocelot I ran the application approximately 50 times and there is
+    starts. On Ocelot I ran the application approximately 200 times now and there is
     definitely randomness in the outcomes in how the processes concurrently
-    run. Child 2 mostly completes after child 1. However child 2 does complete
-    before child 1 at times. My guess is that the way that I have structured
-    my if.. else with child 1 coded before child 2 biases it this way.
+    run. Child 2 mostly completes after child 1. Child1 mostly initiates first, and
+    completes first. There have been instances (thought rare) where child 2 has
+    initiated first and completed first. So there is some randomness in that.
 
 
 */
