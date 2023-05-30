@@ -27,7 +27,7 @@
 int collatz(int processNumber, int n)
 {
     const int q = n;
-    printf("Const q = %d", q);
+    printf("Const q = %d\n", q);
     // printf("From child%d: number = %d\n", processNumber, n);
     if (!(q == n))
     {
