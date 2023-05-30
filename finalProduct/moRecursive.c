@@ -95,11 +95,11 @@ int main(int argc, char *argv[])
     // child process 1
     else if (pid1 == 0)
     {
-        printf("From child1, pid=%d, init: number=%d\n", getpid(), userInput);
         n = userInput;
+        printf("From child1, pid=%d, init: number=%d\n", getpid(), n);
 
         // apply Collatz conjecture
-        collatz(1, userInput);
+        collatz(1, n);
         printf("From child1, pid=%d I'm done!\n", getpid());
     }
     // child process 2
