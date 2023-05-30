@@ -40,14 +40,14 @@ int collatz(int processNumber, int n)
         userMessage(processNumber, n);
     }
 
+    q++;
+
     if (n == 1)
     {
         return 0;
     }
     else
     {
-        q++;
-
         if (n % 2 == 0)
         {
 
