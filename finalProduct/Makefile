@@ -1,10 +1,10 @@
-all: marcosOndruska moRecursive
+all: marcosOndruska marcosOndruskaRecursive
 
 marcosOndruska: marcosOndruska.o 
 	cc -o marcosOndruska marcosOndruska.c 	
 
-moRecursive: moRecursive.o 
-	cc -o moRecursive moRecursive.c 
+marcosOndruskaRecursive: marcosOndruskaRecursive.o 
+	cc -o marcosOndruskaRecursive marcosOndruskaRecursive.c 
 
 clean:
 	rm *.marcosOndruska
